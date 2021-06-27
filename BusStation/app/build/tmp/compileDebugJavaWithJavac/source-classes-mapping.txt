@@ -1,0 +1,17 @@
+com/example/busschedule/database/AppDatabase_Impl.java
+ com.example.busschedule.database.AppDatabase_Impl
+ com.example.busschedule.database.AppDatabase_Impl$1
+com/example/busschedule/database/schedule/ScheduleDao_Impl.java
+ com.example.busschedule.database.schedule.ScheduleDao_Impl
+ com.example.busschedule.database.schedule.ScheduleDao_Impl$1
+ com.example.busschedule.database.schedule.ScheduleDao_Impl$2
+com/example/busschedule/databinding/ActivityMainBinding.java
+ com.example.busschedule.databinding.ActivityMainBinding
+com/example/busschedule/databinding/FullScheduleFragmentBinding.java
+ com.example.busschedule.databinding.FullScheduleFragmentBinding
+com/example/busschedule/databinding/StopScheduleFragmentBinding.java
+ com.example.busschedule.databinding.StopScheduleFragmentBinding
+com/example/busschedule/BuildConfig.java
+ com.example.busschedule.BuildConfig
+com/example/busschedule/databinding/BusStopItemBinding.java
+ com.example.busschedule.databinding.BusStopItemBinding

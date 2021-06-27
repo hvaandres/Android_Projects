@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SQL.iml" filepath="$PROJECT_DIR$/.idea/modules/SQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SQL_Basics.iml" filepath="$PROJECT_DIR$/.idea/modules/SQL_Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SQL_Basics.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SQL_Basics.app.iml" />
     </modules>
   </component>
 </project>

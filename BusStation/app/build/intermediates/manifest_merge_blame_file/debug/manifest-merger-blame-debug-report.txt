@@ -1,0 +1,72 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3     Copyright (C) 2021 The Android Open Source Project
+4     Licensed under the Apache License, Version 2.0 (the "License");
+5     you may not use this file except in compliance with the License.
+6     You may obtain a copy of the License at
+7
+8          http://www.apache.org/licenses/LICENSE-2.0
+9
+10     Unless required by applicable law or agreed to in writing, software
+11     distributed under the License is distributed on an "AS IS" BASIS,
+12     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+13     See the License for the specific language governing permissions and
+14     limitations under the License.
+15-->
+16<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+17    package="com.example.busschedule"
+18    android:versionCode="1"
+19    android:versionName="1.0" >
+20
+21    <uses-sdk
+22        android:minSdkVersion="19"
+22-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml
+23        android:targetSdkVersion="30" />
+23-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml
+24
+25    <application
+25-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:19:5-33:19
+26        android:name="com.example.busschedule.BusScheduleApplication"
+26-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:20:9-70
+27        android:allowBackup="true"
+27-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:21:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.5.0] /Users/hvaandres/.gradle/caches/transforms-3/d1b6a8e2563b0cd69ebcb1469b62e152/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:22:9-43
+31        android:label="@string/app_name"
+31-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:23:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:24:9-54
+33        android:supportsRtl="true"
+33-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:25:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.BusSchedule" >
+35-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:26:9-49
+36        <activity android:name="com.example.busschedule.MainActivity" >
+36-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:27:9-32:20
+36-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:27:19-70
+37            <intent-filter>
+37-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:28:13-31:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:29:17-69
+38-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:29:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:30:17-77
+40-->/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/AndroidManifest.xml:30:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <service
+44-->[androidx.room:room-runtime:2.3.0] /Users/hvaandres/.gradle/caches/transforms-3/9eb7af75f24fe8c1b0a495770b92b078/transformed/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
+45            android:name="androidx.room.MultiInstanceInvalidationService"
+45-->[androidx.room:room-runtime:2.3.0] /Users/hvaandres/.gradle/caches/transforms-3/9eb7af75f24fe8c1b0a495770b92b078/transformed/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
+46            android:directBootAware="true"
+46-->[androidx.room:room-runtime:2.3.0] /Users/hvaandres/.gradle/caches/transforms-3/9eb7af75f24fe8c1b0a495770b92b078/transformed/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
+47            android:exported="false" />
+47-->[androidx.room:room-runtime:2.3.0] /Users/hvaandres/.gradle/caches/transforms-3/9eb7af75f24fe8c1b0a495770b92b078/transformed/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
+48    </application>
+49
+50</manifest>

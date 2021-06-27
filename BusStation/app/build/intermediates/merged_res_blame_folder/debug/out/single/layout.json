@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/stop_schedule_fragment.xml",
+        "source": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/res/layout/stop_schedule_fragment.xml"
+    },
+    {
+        "merged": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/full_schedule_fragment.xml",
+        "source": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/res/layout/full_schedule_fragment.xml"
+    },
+    {
+        "merged": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/bus_stop_item.xml",
+        "source": "/Users/hvaandres/AndroidStudioProjects/BusStation/app/src/main/res/layout/bus_stop_item.xml"
+    }
+]
