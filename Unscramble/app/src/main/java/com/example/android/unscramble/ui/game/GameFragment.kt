@@ -83,6 +83,8 @@ class GameFragment : Fragment() {
         }
     }
 
+
+
     /*
      * Skips the current word without changing the score.
      * Increases the word count.
