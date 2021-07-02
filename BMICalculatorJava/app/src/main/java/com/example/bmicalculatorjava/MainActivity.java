@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     // Class variable fields
@@ -47,15 +49,26 @@ public class MainActivity extends AppCompatActivity {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculateBmi();
-            }
+                double bmiResult = calculateBmi();
 
+                String ageText = ageEditText.getText().toString();
+                int age = Integer.parseInt(ageText);
+
+                if (age >= 18) {
+                    displayResult(bmiResult);
+                } else {
+                    displayGuidance(bmiResult);
+                }
+
+            }
 
         });
     }
 
-    private void calculateBmi() {
-        String ageText = ageEditText.getText().toString();
+
+
+    private double calculateBmi() {
+
         String inchesText = ageEditText.getText().toString();
         String feetText = ageEditText.getText().toString();
         String weightText = ageEditText.getText().toString();
@@ -63,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Converting the number 'Strings' into 'Int' Variables
         // parseInt = Inspecting/Checking
-        int age = Integer.parseInt(ageText);
         int inches = Integer.parseInt(inchesText);
         int feet = Integer.parseInt(feetText);
         int weight = Integer.parseInt(weightText);
@@ -76,10 +88,51 @@ public class MainActivity extends AppCompatActivity {
         double heightInMeters = totalInches * 0.0254;
 
         // BMI Formula
-        double bmi = weight / (heightInMeters * heightInMeters);
+        return weight / (heightInMeters * heightInMeters);
 
-       String bmiTextResult =  String.valueOf(bmi);
+    }
 
-       resultTextView.setText(bmiTextResult);
+    private void displayResult(double bmi) {
+        // Add only two decimals
+        DecimalFormat myDecimalFormatter = new DecimalFormat("0.00");
+        String bmiTextResult = myDecimalFormatter.format(bmi);
+
+        String fullResultString;
+
+        if (bmi < 18.5) {
+            // Display Underweight
+            fullResultString = bmiTextResult + " - You're underweight, you can eat some tacos";
+        } else if (bmi > 25) {
+            // Display Overweight
+            fullResultString = bmiTextResult + " - You've to stop eating, before you look like homer";
+        } else {
+            // Display healthy
+            fullResultString = bmiTextResult + " - You're healthy, why? I don't know";
+        }
+
+
+        resultTextView.setText(fullResultString);
+    }
+
+    private void displayGuidance(double bmi) {
+
+
+        // Add only two decimals
+        DecimalFormat myDecimalFormatter = new DecimalFormat("0.00");
+        String bmiTextResult = myDecimalFormatter.format(bmi);
+
+        String fullResultString;
+        if(maleButton.isChecked()) {
+
+            // Display boy guidance
+            fullResultString = bmiTextResult + " - We can't help you! You're to young, please ask your doctor.";
+        } else if (femaleButton.isChecked()) {
+            // Display female guidance
+            fullResultString = bmiTextResult + " - We can't help you! You're to young, please ask your doctor.";
+        } else {
+            // Display general guidance
+            fullResultString = bmiTextResult + " - You're healthy. How? I don't know!";
+        }
+
     }
 }
