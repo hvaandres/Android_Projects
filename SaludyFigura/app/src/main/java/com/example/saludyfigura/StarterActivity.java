@@ -15,19 +15,20 @@ public class StarterActivity extends AppCompatActivity {
 
         ListView startersList = findViewById(R.id.list_view_starters);
 
-        String[] company = {
-                "Website",
-                "Whatsap",
-                "Slack",
-                "Appointments",
+        Details[] company = {
+
+                new Details("Website", "This is the main website", "https://saludyfigura.mx"),
+                new Details("Telephone Number: (33)551524512", "This is the best way to get in contact with us", "https://saludyfigura.mx/whatsup"),
+                new Details("Let's chat through here", "Slack is a communication app", "https://saludyfigura.slack.com")
+
+
+
         };
 
-        ArrayAdapter<String> companyAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, company);
+
+        ArrayAdapter<Details> companyAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, company);
 
         startersList.setAdapter(companyAdapter);
-
-
-
 
 
     }
