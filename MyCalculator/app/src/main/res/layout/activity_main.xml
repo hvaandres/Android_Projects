@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:width="0dp"
             android:text="/"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="5dp"
             />
 
@@ -120,7 +120,7 @@
             android:layout_height="match_parent"
             android:width="0dp"
             android:text="*"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="5dp"
             />
 
@@ -174,7 +174,7 @@
             android:layout_height="match_parent"
             android:width="0dp"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="5dp"
             />
 
@@ -197,7 +197,7 @@
             android:layout_height="match_parent"
             android:width="0dp"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             android:layout_margin="5dp"
             />
         <Button
@@ -227,7 +227,7 @@
             android:layout_height="match_parent"
             android:width="0dp"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_margin="5dp"
             />
 
@@ -247,7 +247,8 @@
             android:id="@+id/btnEqual"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="="/>
+            android:text="="
+            android:onClick="onEqual"/>
     </LinearLayout>
 
 
