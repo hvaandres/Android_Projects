@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }
 
     fun onDigit(view: View){
@@ -36,26 +37,51 @@ class MainActivity : AppCompatActivity() {
         if (lastNumeric && !lastDot){
             tvInput.append(".")
             lastNumeric = false
-            lastDot = true
+            lastDot = false
         }
     }
+
 
     fun onEqual(view: View){
         if(lastNumeric){
             var tvValue = tvInput.text.toString()
-             var prefix = ""
+             var prefix = "="
 
             try {
+                    if(tvValue.contains("-")){
+                        val splitValue = tvValue.split("-")
+                        var one = splitValue[0]
+                        var two = splitValue[1]
 
-                // We check if we have a minus at the beggining
-                if(tvValue.startsWith("-")){
-                    prefix = "-"
-                    tvValue = tvValue.substring(1)
+                        if(!prefix.isEmpty()){
+                            one = prefix + one
+                        }
+                    // Check if it is empty or if we have a second minus
+                            tvInput.text = (one.toDouble() - two.toDouble()).toString()
 
-                }
+                }  else if(tvValue.contains("/")){
+                    val splitValue = tvValue.split("/")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    // Check if it is empty or if we have a second minus
+                    if(!prefix.isEmpty()){
+                        one = prefix + one
+                    }
 
-                if(tvValue.contains("-")){
-                    val splitValue = tvValue.split("-")
+                    tvInput.text = (one.toDouble() / two.toDouble()).toString()
+
+                }else if(tvValue.contains("*")){
+                    val splitValue = tvValue.split("*")
+                    var one = splitValue[0]
+                    var two = splitValue[1]
+                    // Check if it is empty or if we have a second minus
+                    if(!prefix.isEmpty()){
+                        one = prefix + one
+                    }
+                    tvInput.text = (one.toDouble() * two.toDouble()).toString()
+
+                }else if(tvValue.contains("+")){
+                    val splitValue = tvValue.split("+")
                     var one = splitValue[0]
                     var two = splitValue[1]
                     // Check if it is empty or if we have a second minus
@@ -71,6 +97,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+
 
     fun onOperator(view: View){
         if(lastNumeric && !isOperatorAdded(tvInput.toString())){

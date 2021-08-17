@@ -170,13 +170,12 @@
         <Button
             android:id="@+id/btnSubtract"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:width="0dp"
-            android:text="-"
-            android:onClick="onOperator"
             android:layout_margin="5dp"
-            />
+            android:layout_weight="1"
+            android:width="0dp"
+            android:onClick="onOperator"
+            android:text="-" />
 
     </LinearLayout>
 
